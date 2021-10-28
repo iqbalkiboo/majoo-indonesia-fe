@@ -55,13 +55,13 @@ const App = () => {
             ref={userNameRef}
             value={username}
             onChange={(e) => setUserName(e.target.value)}
-            placeholder="Github Username"
+            placeholder="Title"
           />
 
           <Input
             value={task}
             onChange={(e) => setTask(e.target.value)}
-            placeholder="Task"
+            placeholder="Description"
           />
         </InputContainer>
 
