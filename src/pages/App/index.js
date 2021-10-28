@@ -48,7 +48,7 @@ const App = () => {
   return (
     <Container>
       <TodoContainer onSubmit={handleSubmit}>
-        <Title>Redux Saga Todo List</Title>
+        <Title>Majoo Indonesia Todo List</Title>
 
         <InputContainer>
           <Input
