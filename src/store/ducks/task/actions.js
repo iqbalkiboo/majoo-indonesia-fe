@@ -9,16 +9,16 @@ import {
 } from './types'
 
 export const getData = (userData) => {
-  const { test } = userData
-  const id = new Date().getTime()
+  // const { test } = userData
+  // const id = new Date().getTime()
 
-  return {
-    type: GET_DATA,
-    payload: {
-      id,
-      test
-    },
-  }
+  // return {
+  //   type: GET_DATA,
+  //   payload: {
+  //     id,
+  //     test
+  //   },
+  // }
 }
 
 export const getDataSuccess = (payload) => ({

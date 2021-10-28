@@ -18,7 +18,6 @@ const App = () => {
   const userNameRef = useRef(null)
   const [username, setUserName] = useState('')
   const [task, setTask] = useState('')
-  const [data, setData] = useState('')
 
   const dispatch = useDispatch()
   const { taskList, showError } = useSelector(({ Task }) => Task)
@@ -35,10 +34,6 @@ const App = () => {
 
     userNameRef.current.focus()
   }
-
-  useEffect(() => {
-    
-  }, [])
 
   const handleRemoveTask = (id) => {
     const removeTaskAction = removeTaskById(id)

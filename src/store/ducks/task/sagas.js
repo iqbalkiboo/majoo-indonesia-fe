@@ -1,6 +1,6 @@
 import { takeEvery, put, call } from 'redux-saga/effects'
 import { USER_FETCH_REQUESTED, GET_DATA_SUCCESS } from './types'
-import { fetchUserSuccess, fetchUserFailed, getDataFailed, getDataSuccess } from './actions'
+import { addTask, fetchUserSuccess, fetchUserFailed, getDataFailed, getDataSuccess } from './actions'
 import { API } from 'services'
 
 export function* getData(){
@@ -17,8 +17,8 @@ export function* fetchUser(action) {
   try {
     const { task } = action.payload
     const { data } = yield call(API.get)
-    // const addTaskAction = addTask(data, task)
-    yield put(fetchUserSuccess(data, task))
+    const addTaskAction = addTask(data, task)
+    yield put(addTaskAction)
   } catch (e) {
     yield put(fetchUserFailed())
   }
